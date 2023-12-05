@@ -17,7 +17,7 @@ changes = release["body"]
 contents = repo.get_contents("CHANGELOG.md")
 changelog = contents.decoded_content.decode()
 
-changelog = changelog + f"\n\n## {new_version}\n\n{changes}"
+changelog + f"\n\n## {new_version}\n\n{changes}" = changelog
 commit_message = (
     os.environ.get("INPUT_COMMIT_MESSAGE")
     or f"docs(changelog): update for version {new_version}"
