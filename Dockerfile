@@ -1,4 +1,4 @@
-FROM python:3.12.5
+FROM python:latest
 
 RUN pip install PyGithub
 
